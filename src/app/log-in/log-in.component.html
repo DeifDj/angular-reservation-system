@@ -1,1 +1,13 @@
-<p>log-in works!</p>
+<form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+  <div>
+    <label for="username">Nombre de usuario:</label>
+    <input type="text" id="username" name="username" required [(ngModel)]="username">
+  </div>
+  <div>
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" required [(ngModel)]="password">
+  </div>
+  <button type="submit">Log In</button>
+</form>
+
+  <router-outlet></router-outlet>
