@@ -1,1 +1,9 @@
-<p>reservation-list works!</p>
+<form (ngSubmit)="createReservation()">
+  <div>
+    <label for="date">Fecha de reserva:</label>
+    <input type="date" id="date" name="date" required [(ngModel)]="reservation.date">
+  </div>
+  <!-- Agrega más campos según lo necesites -->
+  <button type="submit">Crear reserva</button>
+</form>
+  <router-outlet></router-outlet>

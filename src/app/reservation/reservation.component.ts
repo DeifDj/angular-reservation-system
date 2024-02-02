@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./reservation.component.css']
 })
 export class ReservationComponent {
-
+  // Puedes añadir la lógica para crear una reserva aquí
 }

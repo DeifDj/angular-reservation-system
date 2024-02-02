@@ -1,0 +1,22 @@
+.nav-bar {
+  background-color: #ffffff; /* Color blanco */
+  padding: 10px; /* Espaciado interno */
+  width: 100%; /* Ancho completo de la pantalla */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  position: fixed; /* Fijar la barra en la parte superior */
+  top: 0; /* Desde la parte superior */
+  z-index: 1000; /* Capa superior para estar encima del contenido */
+}
+
+/* Estilos para los elementos en la barra de navegación */
+.nav-bar a {
+  margin: 0 15px; /* Espaciado entre elementos */
+  text-decoration: none;
+  color: #333333; /* Color de texto */
+  font-weight: bold;
+}
+
+/* Cambiar color al pasar el mouse */
+.nav-bar a:hover {
+  color: #3012da; /* Color rosa como ejemplo, cámbialo según tu preferencia */
+}

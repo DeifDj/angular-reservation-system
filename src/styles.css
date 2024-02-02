@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Ajusta la altura para que ocupe toda la pantalla */
+    justify-content: center; /* Ajusta el ancho para que ocupe toda la pantalla */
+    background: url('C:\Users\clikb\angular-reservation-system\src\assets\pngtree-laser-spotlight-show-performance-concert-stage-decoration-pattern-picture-image_2249304.jpg') no-repeat;
+    background-size: cover; /* Escala la imagen para cubrir completamente el fondo */
+    background-position: center center; /* Centra la imagen en el fondo */
+}
+  
+  .festive-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffffbe; /* Fondo blanco para resaltar el contenido */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar el contenido */
+  }
+  
+  h1 {
+    color: #0a0507; /* Color rosa como ejemplo, cámbialo según tu preferencia */
+    font-size: 36px;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fuente divertida, cámbiala según tu preferencia */
+  }
+  
+  .festive-menu {
+    margin-top: 20px;
+  }
+  
+  .festive-menu a {
+    margin: 0 10px;
+    color: #0a0c0e; /* Color azul como ejemplo, cámbialo según tu preferencia */
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif; /* Fuente estándar, cámbiala según tu preferencia */
+  }
+  
+  .festive-menu a:hover {
+    color: #e74c3c; /* Cambia el color al pasar el mouse, cámbialo según tu preferencia */
+  }
