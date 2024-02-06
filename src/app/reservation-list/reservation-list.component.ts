@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./reservation-List.component.css']
 })
 export class ReservationListComponent {
+onSubmit() {
+throw new Error('Method not implemented.');
+}
+eventName: any;
+eventDate: any;
 createReservation() {
 throw new Error('Method not implemented.');
 }

@@ -5,15 +5,16 @@ import { ReservationListComponent } from './reservation-list/reservation-list.co
 import { LogInComponent } from './log-in/log-in.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'reservation', component: ReservationListComponent },
   { path: 'logIn', component: LogInComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  
+  
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
-  declarations: [],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule { }
