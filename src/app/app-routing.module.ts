@@ -5,12 +5,11 @@ import { ReservationListComponent } from './reservation-list/reservation-list.co
 import { LogInComponent } from './log-in/log-in.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'reservation', component: ReservationListComponent },
   { path: 'logIn', component: LogInComponent },
-  
-  
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/logIn', pathMatch: 'full' } // Esta línea configura la ruta inicial
 ];
 
 @NgModule({
