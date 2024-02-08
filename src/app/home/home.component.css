@@ -1,42 +1,49 @@
 
+.home-container {
+  text-align: center;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin: 20px;
+}
 
-  .home-container {
-    text-align: center;
-    padding: 30px;
-    background-color: #ecc88e; /* Color de fondo para un toque festivo (naranja) */
-    border-radius: 10px; /* Esquinas redondeadas */
-  }
-  
-  h1 {
-    color: #f0422b; /* Color rosa */
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
-  
-  p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-  
-  /* Estilo para resaltar las secciones de información (amarillo) */
-  .home-container p:nth-child(odd) {
-    background-color: #ecc88e;
-    padding: 10px;
-    border-radius: 10px;
-  }
-  
-  .button-primary {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 18px;
-    text-decoration: none;
-    color: #ffffff;
-    background-color: #3498db; /* Color azul */
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button-primary:hover {
-    background-color: #e74c3c; /* Cambia el color al pasar el mouse */
-  }
+h1 {
+  color: #f0422b;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Estilo para resaltar las secciones de información (amarillo) */
+.home-container p:nth-child(odd) {
+  background-color: #fefefe; /* Color ligeramente diferente para resaltar */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.button-primary {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #e74c3c; /* Color rojo */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.button-primary:hover {
+  background-color: #c0392b; /* Cambia el color al pasar el mouse */
+}
+
+/* Efecto de clic */
+.button-primary:active {
+  transform: translateY(2px); /* Desplaza el botón hacia abajo al hacer clic */
+}
