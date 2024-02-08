@@ -3,15 +3,15 @@
   margin: auto;
   margin-top: 50px;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #3498db;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .log-in-container h2 {
   text-align: center;
-  color: #333;
+  color: #3498db;
 }
 
 .log-in-form {
@@ -20,26 +20,31 @@
 }
 
 .log-in-form label {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   color: #555;
+  font-weight: bold;
 }
 
 .log-in-form input {
-  padding: 8px;
-  margin-bottom: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
   border: 1px solid #ccc;
-  border-radius: 3px;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
 .log-in-form button {
-  padding: 10px;
-  background-color: #007bff;
+  padding: 12px;
+  background-color: #3498db;
   color: #fff;
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .log-in-form button:hover {
-  background-color: #0056b3;
+  background-color: #217dbb;
 }
