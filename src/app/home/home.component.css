@@ -1,15 +1,14 @@
-
 .home-container {
   text-align: center;
   padding: 30px;
-  background-color: #ffffff;
+  background-color: transparent; /* Fondo transparente */
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  box-shadow: 0 0 20px rgba(214, 148, 148, 0.1); /* Sombra suave */
   margin: 20px;
 }
 
 h1 {
-  color: #f0422b;
+  color: #00ccff; /* Cambiado a un color diferente de negro */
   font-size: 36px;
   margin-bottom: 20px;
 }
@@ -18,11 +17,12 @@ p {
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
+  color: #ffffff;
 }
 
 /* Estilo para resaltar las secciones de información (amarillo) */
 .home-container p:nth-child(odd) {
-  background-color: #fefefe; /* Color ligeramente diferente para resaltar */
+  background-color: transparent; /* Fondo transparente */
   padding: 10px;
   border-radius: 10px;
 }

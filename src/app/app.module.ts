@@ -13,6 +13,8 @@ import { LogInComponent } from './log-in/log-in.component';
 import { ReservationListComponent } from './reservation-list/reservation-list.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ReservationComponent } from './reservation/reservation.component';
+import { GallleryComponent } from './galllery/galllery.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -27,10 +29,13 @@ import { ReservationComponent } from './reservation/reservation.component';
     AboutUsComponent,
     NavBarComponent,
     NavigationComponent,
-    ReservationComponent
+    ReservationComponent,
+    GallleryComponent,
+    
   ],
   imports: [
     ReactiveFormsModule,
+    HttpClientModule,
     FormsModule,
     BrowserModule,
     AppRoutingModule, 
