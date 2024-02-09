@@ -15,4 +15,10 @@
       <button type="submit">Create Reservation</button>
   </form> 
 </div>
+<div>
+    <button (click)="showReservations()">Mostrar Reservas</button>
+    <ul *ngIf="showReservationsFlag">
+      <li *ngFor="let reserva of reservations">{{ reserva.nombre }} - {{ reserva.fecha | date }}</li>
+    </ul>
+  </div>
 <router-outlet></router-outlet>
