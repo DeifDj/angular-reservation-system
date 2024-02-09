@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { HeaderComponent } from './header/header.component';
 import { AboutUsComponent } from './about-us/about-us.component';
@@ -35,6 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     ReactiveFormsModule,
+    MatSlideToggleModule,
     HttpClientModule,
     FormsModule,
     BrowserModule,
