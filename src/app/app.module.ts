@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { HttpClientModule } from '@angular/common/http';
 
 import { HeaderComponent } from './header/header.component';
 import { AboutUsComponent } from './about-us/about-us.component';
@@ -15,7 +16,7 @@ import { ReservationListComponent } from './reservation-list/reservation-list.co
 import { NavigationComponent } from './navigation/navigation.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { GallleryComponent } from './galllery/galllery.component';
-import { HttpClientModule } from '@angular/common/http';
+
 
 
 

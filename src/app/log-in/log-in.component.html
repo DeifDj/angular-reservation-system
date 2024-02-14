@@ -1,7 +1,6 @@
-<div>
+<div class="log-in-container">
   <h2>Log In</h2>
-  <form (ngSubmit)="onSubmit()">
-    <!-- Agrega tus campos de formulario aquí -->
+  <form (ngSubmit)="onSubmit()" class="log-in-form">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" [(ngModel)]="user.username" required>
 
@@ -10,7 +9,6 @@
 
     <button type="submit">Log In</button>
   </form>
-  
 </div>
 
 <router-outlet></router-outlet>

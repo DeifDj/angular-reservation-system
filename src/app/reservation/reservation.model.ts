@@ -1,6 +1,8 @@
-export interface Reservacion {
-    id: number;
-    nombre: string;
-    fecha: Date;
-    
-  }
+export interface Reservation {
+  id: number;
+  eventName: string;
+  date: Date;
+  location: string;
+  nombre: any; 
+  fecha: Date;
+}

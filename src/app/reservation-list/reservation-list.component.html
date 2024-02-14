@@ -1,24 +1,33 @@
-<div class="festive-container">
-  <h1>New Reservation</h1>
-  <form (ngSubmit)="createReservation()" #reservationForm="ngForm">
-      <!-- Agrega aquí los campos necesarios para crear una nueva reserva -->
+<div class="reservation-list">
+  <h1>Nueva Reserva</h1>
+  <div class="reservation-form">
+    <form (ngSubmit)="createReservation()" #reservationForm="ngForm">
       <div>
-          <label for="eventName">Event Name:</label>
-          <input type="text" id="eventName" name="eventName" required [(ngModel)]="eventName">
+        <label for="eventName">Nombre del Evento:</label>
+        <input type="text" id="eventName" name="eventName" required [(ngModel)]="eventName">
       </div>
       <div>
-          <label for="eventDate">Event Date:</label>
-          <input type="date" id="eventDate" name="eventDate" required [(ngModel)]="eventDate">
+        <label for="eventDate">Fecha del Evento:</label>
+        <input type="date" id="eventDate" name="eventDate" required [(ngModel)]="eventDate">
       </div>
-      <!-- Otros campos y botón de submit -->
-
-      <button type="submit">Create Reservation</button>
-  </form> 
-</div>
-<div>
-    <button (click)="showReservations()">Mostrar Reservas</button>
-    <ul *ngIf="showReservationsFlag">
-      <li *ngFor="let reserva of reservations">{{ reserva.nombre }} - {{ reserva.fecha | date }}</li>
-    </ul>
+      <div>
+        <label for="location">Ubicación:</label>
+        <input type="text" id="location" name="location" required [(ngModel)]="location">
+      </div>
+      <button type="submit">Crear Reserva</button>
+    </form>
   </div>
-<router-outlet></router-outlet>
+
+  <h2>Lista de Reservas</h2>
+  <button (click)="showReservations()">Mostrar Reservas</button>
+  <button (click)="deleteAllReservations()">Eliminar Todas las Reservas</button>
+
+  <ul *ngIf="showReservationsFlag">
+    <li *ngFor="let reserva of reservations" class="reservation-item">
+      <span><strong>Fecha:</strong> {{ reserva.fecha | date }}</span><br>
+      <span><strong>Evento:</strong> {{ reserva.eventName }}</span><br>
+      <span><strong>Lugar:</strong> {{ reserva.location }}</span><br>
+      <hr>
+    </li>
+  </ul>
+</div>
