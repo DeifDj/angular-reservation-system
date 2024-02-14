@@ -18,16 +18,24 @@
     </form>
   </div>
 
-  <h2>Lista de Reservas</h2>
-  <button (click)="showReservations()">Mostrar Reservas</button>
-  <button (click)="deleteAllReservations()">Eliminar Todas las Reservas</button>
+  <ng-container *ngIf="reservations.length === 0; else reservationList">
+    <ng-template>
+      <p>No existen reservaciones creadas aún.</p>
+    </ng-template>
+  </ng-container>
 
-  <ul *ngIf="showReservationsFlag">
-    <li *ngFor="let reserva of reservations" class="reservation-item">
-      <span><strong>Fecha:</strong> {{ reserva.fecha | date }}</span><br>
-      <span><strong>Evento:</strong> {{ reserva.eventName }}</span><br>
-      <span><strong>Lugar:</strong> {{ reserva.location }}</span><br>
-      <hr>
-    </li>
-  </ul>
+  <ng-template #reservationList>
+    <h2>Lista de Reservas</h2>
+    <button (click)="showReservations()">Mostrar Reservas</button>
+    <button (click)="deleteAllReservations()">Eliminar Todas las Reservas</button>
+
+    <ul *ngIf="showReservationsFlag">
+      <li *ngFor="let reserva of reservations" class="reservation-item">
+        <span><strong>Fecha:</strong> {{ reserva.fecha | date }}</span><br>
+        <span><strong>Evento:</strong> {{ reserva.eventName }}</span><br>
+        <span><strong>Lugar:</strong> {{ reserva.location }}</span><br>
+        <hr>
+      </li>
+    </ul>
+  </ng-template>
 </div>

@@ -11,7 +11,7 @@ import { tap } from 'rxjs/operators';
 })
 export class ReservationListComponent implements OnInit {
   eventName: string = '';
-  eventDate: string = '';
+  eventDate: Date = new Date();
   reservations: Reservation[] = [];
   reservations$!: Observable<Reservation[]>;
   showReservationsFlag: boolean = false;
