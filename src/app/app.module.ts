@@ -16,6 +16,7 @@ import { ReservationListComponent } from './reservation-list/reservation-list.co
 import { NavigationComponent } from './navigation/navigation.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { GallleryComponent } from './galllery/galllery.component';
+import { DateFormatPipe } from './date-format.pipe';
 
 
 
@@ -33,6 +34,7 @@ import { GallleryComponent } from './galllery/galllery.component';
     NavigationComponent,
     ReservationComponent,
     GallleryComponent,
+    DateFormatPipe,
     
   ],
   imports: [

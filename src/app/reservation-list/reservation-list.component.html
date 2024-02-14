@@ -31,11 +31,15 @@
 
     <ul *ngIf="showReservationsFlag">
       <li *ngFor="let reserva of reservations" class="reservation-item">
-        <span><strong>Fecha:</strong> {{ reserva.fecha | date }}</span><br>
+        <span><strong>ID:</strong> {{ reserva.id }}</span><br>
+        <span><strong>Nombre de la Reserva:</strong> {{ reserva.nombre }}</span><br>
+        <span><strong>Fecha:</strong> {{ reserva.fecha | dateFormat: 'long' }}</span><br>
         <span><strong>Evento:</strong> {{ reserva.eventName }}</span><br>
         <span><strong>Lugar:</strong> {{ reserva.location }}</span><br>
+        <!-- Añadir más propiedades si es necesario -->
         <hr>
       </li>
     </ul>
   </ng-template>
 </div>
+
