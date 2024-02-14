@@ -1,3 +1,5 @@
+// reservation.service.ts
+
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -19,5 +21,10 @@ export class ReservationService {
     const currentReservations = this.getReservations();
     currentReservations.push(newReservation);
     localStorage.setItem(this.storageKey, JSON.stringify(currentReservations));
+  }
+
+  // Eliminar todas las reservas del LocalStorage
+  deleteAllReservations(): void {
+    localStorage.removeItem(this.storageKey);
   }
 }
