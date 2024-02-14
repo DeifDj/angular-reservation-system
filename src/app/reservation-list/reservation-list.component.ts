@@ -3,11 +3,13 @@ import { ReservationService } from '../services/reservation.service';
 import { Reservation } from '../reservation/reservation.model';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { DateFormatPipe } from '../date-format.pipe';
 
 @Component({
   selector: 'app-reservation-list',
   templateUrl: './reservation-list.component.html',
-  styleUrls: ['./reservation-list.component.css']
+  styleUrls: ['./reservation-list.component.css'],
+  providers: [DateFormatPipe]
 })
 export class ReservationListComponent implements OnInit {
   eventName: string = '';
