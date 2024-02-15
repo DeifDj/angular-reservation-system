@@ -27,6 +27,10 @@ export class EventReservationService {
   }
 
   loginUser(userData: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/login`, userData);
+    return this.http.post<any>(`${this.apiUrl}/login`, userData);
+    // ^ Ajustado para indicar que se espera una respuesta del tipo 'any'
+  }
+  registerUser(userData: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/register`, userData);
   }
 }
