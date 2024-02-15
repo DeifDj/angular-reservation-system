@@ -1,11 +1,10 @@
-// reservation.service.ts
-
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
-export class ReservationService {
+export class ServicioReservaciones {
   private storageKey = 'reservations';
 
   constructor() {}
@@ -26,5 +25,11 @@ export class ReservationService {
   // Eliminar todas las reservas del LocalStorage
   deleteAllReservations(): void {
     localStorage.removeItem(this.storageKey);
+  }
+
+  // Obtener reservaciones como un observable
+  obtenerReservaciones(): Observable<any[]> {
+    const reservations = this.getReservations();
+    return of(reservations);
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ReservationService } from '../services/reservation.service';
+import { ServicioReservaciones } from '../services/reservation.service';
 import { Reservation } from '../reservation/reservation.model';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
@@ -19,7 +19,7 @@ export class ReservationListComponent implements OnInit {
   showReservationsFlag: boolean = false;
   location: any;
 
-  constructor(private reservationService: ReservationService) {}
+  constructor(private servicioReservaciones: ServicioReservaciones) {}
 
   createReservation(): void {
     if (this.eventName && this.eventDate) {
@@ -32,13 +32,13 @@ export class ReservationListComponent implements OnInit {
         fecha: new Date()
       };
 
-      this.reservationService.saveReservation(newReservation);
+      this.servicioReservaciones.saveReservation(newReservation);
       this.initializeReservations();
     }
   }
 
   deleteAllReservations(): void {
-    this.reservationService.deleteAllReservations();
+    this.servicioReservaciones.deleteAllReservations();
     this.initializeReservations();
   }
 
@@ -47,7 +47,7 @@ export class ReservationListComponent implements OnInit {
   }
 
   initializeReservations(): void {
-    this.reservations = this.reservationService.getReservations();
+    this.reservations = this.servicioReservaciones.getReservations();
   }
 
   simulateReservationData(): Reservation[] {
