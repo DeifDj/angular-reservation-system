@@ -1,5 +1,5 @@
 <div class="log-in-container">
-  <h2>Log In</h2>
+  <h2>{{ registrationMode ? 'Register' : 'Log In' }}</h2>
   <form (ngSubmit)="onSubmit()" class="log-in-form">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" [(ngModel)]="user.username" required>
@@ -7,8 +7,13 @@
     <label for="password">Password:</label>
     <input type="password" id="password" name="password" [(ngModel)]="user.password" required>
 
-    <button type="submit">Log In</button>
+    <button type="submit">{{ registrationMode ? 'Register' : 'Log In' }}</button>
   </form>
+
+  <button type="button" (click)="toggleRegistrationMode()">
+    {{ registrationMode ? 'Already have an account? Log In' : 'Don\'t have an account? Register' }}
+  </button>
 </div>
 
 <router-outlet></router-outlet>
+

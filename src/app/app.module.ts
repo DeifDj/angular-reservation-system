@@ -17,6 +17,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { GallleryComponent } from './galllery/galllery.component';
 import { DateFormatPipe } from './date-format.pipe';
+import { RegistrationComponent } from './registration/registration.component';
 
 
 
@@ -36,6 +37,7 @@ import { DateFormatPipe } from './date-format.pipe';
     ReservationComponent,
     GallleryComponent,
     DateFormatPipe,
+    RegistrationComponent,
     
   ],
   imports: [

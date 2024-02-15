@@ -13,20 +13,39 @@ export class LogInComponent {
     password: ''
   };
 
+  registrationMode = false; // Variable para controlar si mostrar el formulario de registro
+
   constructor(private router: Router, private reservationService: EventReservationService) {}
 
+  toggleRegistrationMode() {
+    this.registrationMode = !this.registrationMode;
+  }
+
   onSubmit() {
-    // Lógica de inicio de sesión
-    this.reservationService.loginUser(this.user).subscribe(
-      response => {
-        // Lógica después de la autenticación exitosa
-        console.log('Inicio de sesión exitoso:', response);
-        this.router.navigate(['/Home']); // Redireccionar al usuario a la ruta /Home
-      },
-      error => {
-        console.error('Error al iniciar sesión:', error);
-        // Aquí puedes manejar el error y mostrar un mensaje al usuario
-      }
-    );
+    if (this.registrationMode) {
+      // Lógica para manejar el formulario de registro
+      this.reservationService.registerUser(this.user).subscribe(
+        (response) => {
+          console.log('Registro exitoso:', response);
+          // Puedes redirigir al usuario a la página que prefieras después del registro
+          this.router.navigate(['/home']);
+        },
+        (error) => {
+          console.error('Error al registrar usuario:', error);
+        }
+      );
+    } else {
+      // Lógica para manejar el formulario de inicio de sesión
+      this.reservationService.loginUser(this.user).subscribe(
+        (response) => {
+          console.log('Inicio de sesión exitoso:', response);
+          // Puedes redirigir al usuario a la página que prefieras después del inicio de sesión
+          this.router.navigate(['/home']);
+        },
+        (error) => {
+          console.error('Error al iniciar sesión:', error);
+        }
+      );
+    }
   }
 }
