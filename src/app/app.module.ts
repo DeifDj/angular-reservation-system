@@ -15,7 +15,7 @@ import { LogInComponent } from './log-in/log-in.component';
 import { ReservationListComponent } from './reservation-list/reservation-list.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ReservationComponent } from './reservation/reservation.component';
-import { GallleryComponent } from './galllery/galllery.component';
+import { GalleryComponent, } from './gallery/gallery.component';
 import { DateFormatPipe } from './date-format.pipe';
 import { RegistrationComponent } from './registration/registration.component';
 
@@ -35,7 +35,7 @@ import { RegistrationComponent } from './registration/registration.component';
     NavBarComponent,
     NavigationComponent,
     ReservationComponent,
-    GallleryComponent,
+    GalleryComponent,
     DateFormatPipe,
     RegistrationComponent,
     

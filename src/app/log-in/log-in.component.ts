@@ -48,4 +48,8 @@ export class LogInComponent {
       );
     }
   }
+  getSomeData(): string {
+    // Tu lógica para obtener datos
+    return 'Some data from LogInComponent';
+  }
 }

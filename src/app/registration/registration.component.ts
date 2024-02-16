@@ -14,6 +14,7 @@ export class RegistrationComponent {
     password: '',
     // Agrega aquí cualquier otro campo que necesites para el registro
   };
+  
 
   constructor(private router: Router, private registrationService: RegistrationService) {}
 
@@ -28,4 +29,5 @@ export class RegistrationComponent {
       }
     );
   }
+  
 }

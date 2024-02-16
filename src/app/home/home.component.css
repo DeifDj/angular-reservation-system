@@ -8,7 +8,7 @@
 }
 
 h1 {
-  color: #00ccff; /* Cambiado a un color diferente de negro */
+  color: #ff2600; /* Cambiado a un color diferente de negro */
   font-size: 36px;
   margin-bottom: 20px;
 }
@@ -17,7 +17,7 @@ p {
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #03fde8;
 }
 
 /* Estilo para resaltar las secciones de información (amarillo) */
