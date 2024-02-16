@@ -9,6 +9,7 @@ import { EmpresaService } from '../empresa.service';
 })
 export class HomeComponent implements OnInit {
   empresa: any;
+  title: string = 'Welcome to the Home Page';
 
   constructor(private empresaService: EmpresaService) {}
 
@@ -17,5 +18,9 @@ export class HomeComponent implements OnInit {
   }
   mostrarInformacionEmpresa() {
     // Lógica para mostrar información adicional si es necesario.
+  }
+  getSomeData(): string {
+    // Tu lógica para obtener datos
+    return 'Some data from HomeComponent';
   }
 }

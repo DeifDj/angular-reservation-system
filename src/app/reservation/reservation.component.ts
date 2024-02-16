@@ -23,4 +23,8 @@ export class ReservationComponent {
       }
     );
   }
+  getSomeData(): string {
+    
+    return 'Some data from ReservationComponent';
+  }
 }
